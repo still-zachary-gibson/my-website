@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+      <span id="board_1">
+      <div id="row_1">██████████</div> <div class ="row1" id="score_time">00:00</div> <br>
+      <div id="row_2">██████████</div> <div class ="row2" id="score_points">Score: 0</div> <br>
+      <div id="row_3">██████████</div> <div class ="row3" id="score_lines">Lines: 0</div> <br>
+      <div id="row_4">██████████</div> <div class ="row4" id="score_level">Level: 0</div> <br>
+      <div id="row_5">██████████</div> <div class ="row5" id="score_words"> </div> <br>
+      <div id="row_6">██████████</div> <div class ="row6"> </div><br>
+      <div id="row_7">██████████</div> <div class ="row7" id="hi_score" style="display:none">Highscores:</div> <br>
+      <div id="row_8">██████████</div> <div class ="row8" id="hi_score_1"></div><br>
+      <div id="row_9">██████████</div> <div class ="row9" id="hi_score_2"></div><br>
+      <div id="row_10">██████████</div> <div class ="row10" id="hi_score_3"></div><br>
+      <div id="row_11">██████████</div> <div class ="row11" id="hi_score_4"></div><br>
+      <div id="row_12">██████████</div> <div class ="row12" id="hi_score_5"></div><br>
+      <div id="row_13">██████████</div> <div class ="row13"> </div> <br>
+      <div id="row_14">██████████</div> <div class ="row14" id="attack_timer1" style="display:none">ATTACK PROGRESS:</div><br>
+      <div id="row_15">██████████</div> <div class ="row15" id="attack_timer2" style="display:none">[░░░░░░░░░░░░]</div><br>
+      <div id="row_16">██████████</div> <div class ="row16"> </div> <br>
+      <div id="row_17">██████████</div> <span id="shadowBoxa" class="row17" style="display:none">CHAOS!</span> <br>
+      <div id="row_18">██████████</div> <div class ="row18" id="cur_held">Current: </div> <br>
+      <div id="row_19">██████████</div> <div class ="row19" id="next_held">Next: </div> <br>
+      <div id="row_20">██████████</div> <div class ="row20" id="score_held">Held: </div> <br>
+      <div id="row_21"></div>
+      </span>
+      
+      <span id="board_2">
+      <div id="row_1_b">██████████</div> <div class ="row1_b" id="score_time_b">00:00</div> <br>
+      <div id="row_2_b">██████████</div> <div class ="row2_b" id="score_points_b">Score: 0</div> <br>
+      <div id="row_3_b">██████████</div> <div class ="row3_b" id="score_lines_b">Lines: 0</div> <br>
+      <div id="row_4_b">██████████</div> <div class ="row4_b" id="score_level_b">Level: 0</div> <br>
+      <div id="row_5_b">██████████</div> <div class ="row5_b" id="score_words_b"> </div> <br>
+      <div id="row_6_b">██████████</div> <div class ="row6_b"> </div> <br>
+      <div id="row_7_b">██████████</div> <div class ="row7_b"> </div> <br>
+      <div id="row_8_b">██████████</div> <div class ="row8_b"> </div> <br>
+      <div id="row_9_b">██████████</div> <div class ="row9_b"> </div> <br>
+      <div id="row_10_b">██████████</div> <div class ="row10_b"> </div> <br>
+      <div id="row_11_b">██████████</div> <div class ="row11_b"> </div> <br>
+      <div id="row_12_b">██████████</div> <div class ="row12_b"> </div> <br>
+      <div id="row_13_b">██████████</div> <div class ="row13_b"> </div> <br>
+      <div id="row_14_b">██████████</div> <div class ="row14_b"> </div> <br>
+      <div id="row_15_b">██████████</div> <div class ="row15_b"> </div> <br>
+      <div id="row_16_b">██████████</div> <div class ="row16_b"> </div> <br>
+      <div id="row_17_b">██████████</div> <span id="shadowBoxa_b" class="row17_b" style="display:none">CHAOS!</span> <br>
+      <div id="row_18_b">██████████</div> <div class ="row18_b" id="cur_held_b">Current: </div> <br>
+      <div id="row_19_b">██████████</div> <div class ="row19_b" id="next_held_b">Next: </div> <br>
+      <div id="row_20_b">██████████</div> <div class ="row20_b" id="score_held_b">Held: </div> <br>
+      <div id="row_21_b"></div>
+      </span>
+      <br id="extra_break" style="display:none">
+      <br>
+      
+      <span id="board_3">
+      <input type="text" id="high_score_input" minlength="1" maxlength="20" placeholder="Enter your name!" style="display:none" onfocus="disableKeys(false)">
+      <button id="pause_button" onclick="pause()" style="display:none">Pause</button>
+      <button id="start_button" onclick="start()">Start!</button>
+      <button id="score_button_import" onclick="document.getElementById('getFile').click()">Import Scores</button>
+  <input type="file" id="getFile" style="display:none" accept=".txt">
+      <button id="score_button_export" onclick="export_score()" style="display:none">Export Scores</button>
+      <br>
+      <br>
+      <div id="art_settings" style="display:none">
+          <span>Tool: </span> <select onkeydown="IgnoreAlpha(event);" id="art_tool"><option value="pencil">Pencil/Eraser</option><option value="bucket">Fill</option><option value="bucket_bad">Erase</option><option value="sticker">Stickers</option></select><br>
+          <span style="display:none" id="art_stick">Sticker: </span> <select onkeydown="IgnoreAlpha(event);" id="art_sticker" style="display:none"><option value="O">O</option><option value="T">T</option></select><br>
+        <span style="display:none" id="art_color">Custom: </span>  <input style="display:none" id="art_pick" type="color" value="#ff0000">
+        </div>
+      <div id="settings">
+        <span style="font-size:20px">Settings:</span><br>
+        <span>Show Block Centers: </span><input type="checkbox" id="show_center"><br>
+        <span>Colors: </span><input type="checkbox" id="show_colors" checked="true">
+        <span>Level Colors: </span><input type="checkbox" id="show_colors_level" checked="true"><br>
+        <span>No BG: </span><input type="checkbox" id="show_bg">
+        <span>Dark Mode: </span><input type="checkbox" id="darked"><br>
+        <span>Square Pixels: </span><input type="checkbox" id="wide"> 
+        <span>Center Page: </span><input type="checkbox" id="page_center"><br>
+        <span>Checkered BG: </span><input type="checkbox" id="check_bg" checked="true"> <br>
+        <span>Shown Next: </span><input type="number" value="1" min="0" max="3" id="next_num">
+      </div>
+      <br>
+      <br>
+      <div id="start_settings">
+        <span style="font-size:20px">Gameplay Modifiers:</span><br>
+        <span>Starting Level: </span> <input type="number" value="1" id="start_level" min="1" max="3"> <br>
+         <span>Time Attack: </span><input type="checkbox" id="tt"> <span id="tt_level" style="display:none">Length: </span> <select id="time_level" style="display:none"><option value="5">5:00</option><option value="15">15:00</option><option value="1">1:00</option><option value="30">30:00</option><option value="60">1:00:00</option></select><br>
+        <span>Board Dimensions: </span><input type="number" value="10" id="board_x" min="5" max="20">
+        <span>by </span><input type="number" value="20" id="board_y" min="5" max="40"><br>
+        <div id="standard_settings">
+        <span>Gravity: </span><input type="checkbox" id="grav"> <span>Bombs: </span><input type="checkbox" id="bomb"><br>
+        <span id="two_attack"><span>Attacks: </span><input type="checkbox" id="atk"> <span id="atk_lvel" style="display:none">Attack Level: </span> <input type="number" value="1" id="attack_level" min="1" max="3" style="display:none"><br></span>
+       
+         <span id="hold_rotate">True Randomness: </span><input type="checkbox" id="hold"> 
+          </div>
+        <div id="miner_settings" style="display:none">
+          <span>Holes: </span><input type="checkbox" id="holes" checked="true"> 
+          <span>Starting Layers: </span><input type="number" value="5" id="whole_level" min="1" max="15"> <br>
+          <span>Extra Layers: </span><input type="number" value="2" id="hole_level" min="0" max="6"> 
+        </div>
+        <div id="puyo_settings" style="display:none">
+          <span style="display:none">Gravity: </span><input type="checkbox" id="grav_p" checked="true" style="display:none">
+          <span id="two_attack_p"><span>Attacks: </span><input type="checkbox" id="atk_p"> <span id="atk_lvel_p" style="display:none">Attack Level: </span> <input type="number" value="1" id="attack_level_p" min="1" max="3" style="display:none"></span>
+        </div>
+        <div id="snake_settings" style="display:none">
+          <span>Advanced Tech: </span><input type="checkbox" id="snake_tech" checked="true"> <span>Walls: </span><input type="checkbox" id="snake_walls"> <br>
+          <span>Wall Grace: </span><input type="checkbox" id="snake_mercy" checked="true">
+          <span>Darkness: </span><input type="checkbox" id="snake_light"> <br>
+          <span>Apple Count: </span><input type="number" value="1" id="apple_count" min="1" max="5"> <br>
+          <span>Extra Lives: </span><input type="checkbox" id="snake_extra"> <input type="number" value="1" id="snake_lives" min="1" max="3" style="display:none"><br>
+          <span>Snake Color: </span> <select id="snake_color"><option value="0">Black</option><option value="2">Green</option><option value="3">Blue</option><option value="4">Orange</option><option value="5">Purple</option><option value="6">Cyan</option><option value="7">Yellow</option></select>
+        </div>
+        <div id="rotate_settings" style="display:none">
+          <span>Auto-Shift: </span><input type="checkbox" id="player_rotate"> 
+          <span>Long Lines: </span><input type="checkbox" id="lines_rotate"> <br>
+          <span>Cylindrical: </span><input type="checkbox" id="actual_rotate"> 
+        </div>
+        <div id="mine_settings" style="display:none">
+          <span>Difficulty: </span> <select id="mine_diff"><option value="0">Easy</option><option value="1">Medium</option><option value="2">Hard</option><option value="3">Custom</option></select>
+        </div>
+        <br>
+        <span id="shadowBox" class="rainbow rainbow_text_animated">CHAOS MODE:</span> <input type="checkbox" id="chaos"> <br>
+        <br>
+        <span>Game Type: </span> <select id="game_type"><option value="normal">Normal</option><option value="miner">Mining</option><option value="art">Free Draw</option><option value="puyo">Puyo Puyo</option><option value="snake">Snake</option></select>
+        <br>
+        <span id="two_section"> <span>TWO PLAYER: </span><input type="checkbox" id="two_player"> </span>
+      </div>
+        </span>
+      
+      <!--<button id="level_button_import" onclick="document.getElementById('getFile2').click()">Chaos Levels</button>
+  <input type="file" id="getFile2" style="display:none" accept=".txt">-->
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>

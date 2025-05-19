@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Info</title>
+		<link rel="icon" type="image/x-icon" href="../../Images/Icon.png">
+		<style>
+			#shadowBox {
+				background-color: rgb(0, 0, 0);
+   				background-color: rgba(0, 0, 0, 0.2);
+			}
+
+			.rainbow_text_animated {
+    				background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+				-webkit-background-clip: text;
+    				background-clip: text;
+    				color: transparent;
+    				animation: rainbow_animation 6s ease-in-out infinite;
+    				background-size: 400% 100%;
+			}
+
+			@keyframes rainbow_animation {
+    				0%,100% {
+        				background-position: 0 0;
+   				}
+
+   				50% {
+    					background-position: 100% 0;
+				}
+			}
+		</style>
+	</head>
+	<body>	
+		<div><b>OPTIONS:</b><br>Show Block Centers: Lets you see the general anchor point of a piece.<br>Colors: Self evident.<br>Level Colors: If levels have different colors or not.<br>No BG: Empty spaces are perfectly clear.<br>Dark Mode: Self evident.<br>Square Pixels: Stretches playing field to have square characters.<br>Center Page: Centers page, doesn't work in iframe.<br>Checkered BG: Straight columns or checkboard pattern?<br>Shown Next: How many pieces you see in advance.<br>Starting Level: Self evident.<br>Time Attack: Go until time's up!<br>Board Dimensions: Width by Height in blocks.<br><br>
+		<b>MODE INFORMATION:</b><br><br>
+		Normal: Traditional Tetris, basic controls.<br>Gravity: Blocks will fall if they can.<br>Bombs: Rare pieces that'll destroy blocks below where they land!<br>Attacks (Single Player): Get random junk to clear coming from the bottom of your screen, clear lines to slow down the rate of it being sent! Set attack level + current level determines speed.<br>Attacks (Two Player): Clearing lines will send junk to your opponents board, the more in one or back to back, the better!<br>True Randomness: Don't take into account which pieces have been sent, just pick completely randomly what to give! This sucks.<br><span id="shadowBox" class="rainbow rainbow_text_animated">CHAOS</span>: More pieces can fall, the selection changing with each level!<br><br>
+		Miner: Only bombs, don't let the junk take over your board! No soft or hard dropping!<br>Holes: Perfect lines of junk, or should it have holes?<br>Starting Layers: How many lines to start with filled.<br>Extra Layers: Each shipment of junk will have a guaranteed extra [num] layers.<br><span id="shadowBox" class="rainbow rainbow_text_animated">CHAOS</span>: More types of bombs!<br><br>
+		Free Draw: Just draw stuff, lol. Controls are different here, I'll use the function rather than the keys, since this supports two player, despite nothing good coming of that.<br>You can save your drawings as files with the save button, and load a file with the load button. Press new to start a new one, and draw for whatever's on the board, which can include the previous game.<br>Soft Drop: Move drawing block down by one. Hard Drop: Move up. Rotate Counter-Clockwise/Clockwise: Change drawing color.<br>Hold: Draw your color, or remove it if it's already there, or change the spot's color. If you hold it, you'll keep drawing/erasing your color as you move.<br>There's also a few tools you can use, though only with one person. E/K and R/L to change between them quickly.<br>Pencil/Eraser: Basic. Fill: Replace all connected empty/same color blocks with your selected color. Erase: Like fill, but with empty space. Stickers: Draw with tetrominos!<br><span id="shadowBox" class="rainbow rainbow_text_animated">CHAOS</span>: You've got a custom color, so you can use any color you want, and an eyedropper tool to go with your creative freedom.<br><br>
+		Puyo Puyo: Just as it says, create matches of four to clear blocks, combos are encouraged, etc.<br>Attacks (Single Player): Same as normal mode, but the junk comes from the bottom. Junk can be cleared when adjacent pieces get cleared.<br>Attacks (Two Player): Same as single player, but you're sending attacks to your opponent's board!<br><span id="shadowBox" class="rainbow rainbow_text_animated">CHAOS</span>: More types of puyos for you.<br><br>
+		Snake: You know what snake is. Get apples, try not to crash into yourself. Here are the controls, function rather than keys.<br>WASD or Arrows: Turn to the corresponding direction, unless if that's the opposite way of what you're going.<br>Rotate Counter-Clockwise/Clockwise: Turn Left/Right.<br>Advanced Tech: Turning makes the game move forward a step.<br>Walls: Every collected apple will add a wall to the board, crash into them and you lose.<br>Wall Grace: Gives you a little bit more time to move if you're gonna die next step.<br>Darkness: The board's covered in darkness, you can't see the apples or yourself! Collecting apples will give you a bit more sight for a moment, and you can see the new apple for a moment.<br>Apple Count: How many apples will be on the board at one time.<br>Extra Lives: If checked, then you'll respawn upon losing when you have lives left.<br>Snake Color: Self evident.<br><br>
+		<strong>SINGLE PLAYER EXCLUSIVE</strong><br><br>
+		Shifty: You've got two boards next to each other, and you can move blocks between them! Press E/K and R/L to shift them left or right.<br>Auto-Shift: You can't shift manually anymore, it'll do so after each placed piece.<br>Long Lines: You've gotta make a line across both boards for it to count, unlike how normally only a line across the playing board counts.<br>Cylindrical: Makes the boards a cylinder. No gameplay difference.<br>True Randomness: Same as Normal's.<br><br>
+		Minesweeper: The classic game, use the numbers to deduce where the mines are, and clear everything else! Controls below.<br>WASD/Arrows: Move selection.<br>Rotate Counter-Clockwise: Clear selected piece.<br>Rotate Clockwise: Flag selected piece, meaning pressing clear won't clear it, unless unflagged first. Not required to win the game, but handy.<br>Difficulties: Easy is 8x8 with 10 mines, Medium is 16x16 with 40 mines, Hard is 30x16 with 99 mines, and Custom is anything else.
+		</div>
+	</body>
+</html>

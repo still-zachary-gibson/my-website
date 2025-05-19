@@ -1,0 +1,287 @@
+html, body {
+  user-select: none;
+  cursor: default;
+  margin: 0 auto;
+  padding: 0;
+  white-space: nowrap;
+  /*font-family: monospace;*/
+}
+canvas {
+  display: block;
+}
+
+div {
+  display:inline;
+}
+
+#board_2 {
+  /*color:#FF0000;*/
+  display:none;
+  z-index: 0;
+}
+
+#board_1 {
+  /*color:#FF0000;*/
+  z-index: 1;
+}
+
+
+#board_3 {
+  /*display:inline-block;*/
+  /*transform: translate(0px, -342px)*/
+}
+
+.pause_button {
+  display:"none";
+}
+
+.red {
+  color:#FF0000;
+}
+
+.purple {
+  color:#8000FF;
+}
+
+.yellow {
+  color:#FFFF00;
+}
+
+.green {
+  color:#00FF00;
+}
+
+.orange {
+  color:#FF8000;
+}
+
+.blue {
+  color:#0000FF;
+}
+
+.cyan {
+  color:#00FFFF;
+}
+
+.brown {
+  color:#810102;
+}
+
+.navy {
+  color:#010080;
+}
+
+.grey {
+  color:#AAAAAA;
+}
+
+.white {
+  color:#FFFFFF;
+}
+
+
+.red_dark {
+  color:#CC0000;
+}
+
+.purple_dark {
+  color:#6600CC;
+}
+
+.yellow_dark {
+  color:#CCCC00;
+}
+
+.green_dark {
+  color:#00CC00;
+}
+
+.orange_dark {
+  color:#CC6600;
+}
+
+.blue_dark {
+  color:#0000CC;
+}
+
+.cyan_dark {
+  color:#00CCCC;
+}
+
+.white_dark {
+  color:#CCCCCC;
+}
+
+.invis {
+  opacity: 0.0;
+}
+
+.half_invis {
+  opacity: 0.5;
+}
+
+.custom {
+  color:#FFFFFF;
+}
+
+#shadowBox {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Black w/opacity/see-through */
+    /*border: 3px solid;*/
+}
+
+#shadowBoxa
+{
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+.tooltip_1 {
+  position: relative;
+  display: inline;
+}
+
+.tooltip_1 .tooltiptext_1 {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  white-space: pre-wrap;
+  z-index: 1;
+  top: -200%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip_1:hover .tooltiptext_1 {
+  visibility: visible;
+}
+
+.tooltip_2 {
+  position: relative;
+  display: inline;
+}
+
+.tooltip_2 .tooltiptext_2 {
+  white-space: pre-wrap;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -200%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip_2:hover .tooltiptext_2 {
+  visibility: visible;
+}
+
+.tooltip_3 {
+  position: relative;
+  display: inline;
+}
+
+.tooltip_3 .tooltiptext_3 {
+  white-space: pre-wrap;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -200%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip_3:hover .tooltiptext_3 {
+  visibility: visible;
+}
+
+.tooltip_4 {
+  position: relative;
+  display: inline;
+}
+
+.tooltip_4 .tooltiptext_4 {
+  white-space: pre-wrap;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -200%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip_4:hover .tooltiptext_4 {
+  visibility: visible;
+}
+
+.tooltip_5 {
+  position: relative;
+  display: inline;
+}
+
+.tooltip_5 .tooltiptext_5 {
+  white-space: pre-wrap;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -200%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip_5:hover .tooltiptext_5 {
+  visibility: visible;
+}
