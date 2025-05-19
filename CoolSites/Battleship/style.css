@@ -1,0 +1,13 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+padding-left: 50px;
+}
+
+.parent > div {
+  
+  border : solid black 1px;
+  display: grid;
+  place-items: center;
+}
