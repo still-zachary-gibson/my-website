@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Controls</title>
+		<link rel="icon" type="image/x-icon" href="../../Images/Icon.png">
+		<style>
+			#move_left {
+				position: relative;
+				left: -12px
+			}
+			#move_less_left {
+				position: relative;
+				left: -6px
+			}
+			#move_down {
+				position: relative;
+				top: 1px
+			}	
+		</style>
+	</head>
+	<body>	
+		<div>This is one heck of a thing, so hold on folks!<br><br><b>TILE EDITOR:</b><br>Click: Places or replaces the selected tile.<br>⇄/AD: Change tile to place down, including spikes and empty space.<br>⇅/WS: Change tileset across whole level.<br>Shift: Drag to replace multiple tiles in one click.<br>S: Show tile code.<br?Alt: Save level to file.<br>Space: Toggle tile guide.<br>Enter: Export PNG of level.<br>P: Enter playtesting mode.<br>F:Enter collision editer.<br><br><b>COLLISION EDITOR:</b><br>Click: Create or select a collision block.<br><span id="move_down">↔</span><span id="move_left">↕</span><span id="move_less_left">: Move block.</span><!--Arrows: Move block.--><br>WASD: Change height and width of block.<br>Backspace: Remove block.<br>P: Show block code.<br>F:Return to tile editor.<br>Q: Enter spike editor.<br>Click (Spike): Add or remove spike at tile.<br><br><b>PLAY TESTING:</b><br>WASD and Arrows: Move character.<br>Space: Jump.<br>P: Return to tile editor.<br><br><b>Misc:</b><br>Escape: Clear code at the top.<br>Enter a tile code into the first bar, then click load to load it in. Enter a name into the second bar to save your level when pressing ALT as it.<br>The two X and Y things are respectively for your playtesting spawn location, and for the width and height of the canvas, both in tiles.</div>
+	</body>
+</html>
