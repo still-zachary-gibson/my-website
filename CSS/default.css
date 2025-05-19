@@ -1,0 +1,82 @@
+.headerBit {
+	background-color: purple;
+	text-align: center;
+	color: white;
+	font-size: 1vh;
+	width: 100vw;
+	height: 4vh;
+    	position: fixed;
+    	top: 3vh;
+    	left: 0vw;
+  	z-index: 1;
+}
+
+#funnyText {
+	transform: translate(0px, -0.5vh);
+}
+
+#whitey {
+    	position: fixed;
+	background-color: white;
+	color: white;
+	height: 4vh;
+	top: 0vh;
+	left: 0vh;
+	width: 200vh;
+  	z-index: 1;
+}
+
+#back, #back2 {
+	position: relative;
+	left: 10px;
+}
+#back2 {
+	left: -27px;
+	top: 20px
+}
+
+#controls, #controls2 {
+	position: relative;
+	right: 10px;
+	float: right;
+}
+#controls2 {
+	left: 45px;
+	top: 20px
+}
+
+@media (prefers-color-scheme: dark) {
+	#whitey
+	{
+		color: black;
+		background-color: black;
+	}
+	body
+	{
+		background-color: black;
+	}
+}
+
+p {
+	font-size: 20px;
+	text-align: center;
+}
+
+.mainSite {
+	margin: auto;
+	width: 50%;
+	background-color: lightgrey;
+	position: relative;
+	top: 100px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+iframe {
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 400px;
+	height: 400px;
+	border: none;
+}
