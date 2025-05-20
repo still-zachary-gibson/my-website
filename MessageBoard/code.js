@@ -44,7 +44,7 @@ alert("ugh")
 
 async function getSampleText() {
   const cool_thoing = ( (await fetch('sample.txt', {mode: "same-origin"})).text() );
-	alert(cool_thoing)
+	console.log(cool_thoing)
 }
 
 getSampleText()
