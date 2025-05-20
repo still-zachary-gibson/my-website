@@ -1,17 +1,38 @@
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+
+function handleScore(file) {
+	const reader = new FileReader();
+    reader.onload = handleFileLoad;
+    reader.readAsText(file);
+}
+
+function handleFileLoad(event) {
+//download("test.txt", event.target.result)
+
+	alert(event.target.result)
+}
+
 async function imageUrlToFile(imageUrl) {
     try {
-        const response = await fetch(imageUrl,
-	{
-	mode: "no-cors",
-	}
-);
-	alert(response.ok)
-        if (!response.ok) {
-            throw new Error(`Failed to fetch image (status ${response.status})`);
-        }
+        const response = await fetch(imageUrl, {mode: "no-cors"})
+	alert(response)
         const blob = await response.blob();
-        const filename = imageUrl.substring(imageUrl.lastIndexOf('/') + 1);
+        const filename = "lol"
         const file = new File([blob], filename, { type: blob.type });
+	//download("test.txt", file)
+	alert(file)
+	handleScore(file)
         return file;
     } catch (error) {
         alert('Error:' + error);
@@ -21,4 +42,12 @@ async function imageUrlToFile(imageUrl) {
 
 alert("ugh")
 
-imageUrlToFile('http://localhost:3000/../Images/Battleship.png')
+async function getSampleText() {
+  console.log( (await fetch('sample.txt', {mode: "same-origin"})).text() );
+}
+
+getSampleText()
+
+//tch('Message.html', {mode: "no-cors"}).then(x => alert(x.text()))
+
+//imageUrlToFile('Message.html')
