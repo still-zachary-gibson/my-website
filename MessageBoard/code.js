@@ -23,30 +23,11 @@ function handleFileLoad(event) {
 	alert(event.target.result)
 }
 
-async function imageUrlToFile(imageUrl) {
-    try {
-        const response = await fetch(imageUrl, {mode: "no-cors"})
-	alert(response)
-        const blob = await response.blob();
-        const filename = "lol"
-        const file = new File([blob], filename, { type: blob.type });
-	//download("test.txt", file)
-	alert(file)
-	handleScore(file)
-        return file;
-    } catch (error) {
-        alert('Error:' + error);
-        throw error;
-    }
-}
-
-alert("ugh")
-
 async function getSampleText() {
   const cool_thoing = ( (await fetch('savedMessages.txt', {mode: "same-origin"})).text() );
 	cool_thoing.then(result => {
     // Handle the successful result here
-    const messages = JSON.parse(result)
+    	messages = JSON.parse(result)
 	for(var i = 0; i < messages.length; i++)
 	{
 		messages[i].date = new Date(messages[i].date)
@@ -61,6 +42,26 @@ async function getSampleText() {
 }
 
 getSampleText()
+
+function pause()
+{
+	if(high_score_name.value == "" || high_score_input.value == "")
+	{alert("EMPTY FIELDS!!!"); return;}
+
+	const NewThing = {}
+	NewThing.name = high_score_name.value
+	NewThing.message = high_score_input.value
+	NewThing.date = new Date()
+
+	messages.push(NewThing)
+
+	high_score_name.value = ""
+	high_score_input.value = ""
+
+	const thingToSave = JSON.stringify(messages)
+
+	await fetch('savedMessages.txt', {mode: "same-origin", method: "POST", body: thingToSave})
+}
 
 //tch('Message.html', {mode: "no-cors"}).then(x => alert(x.text()))
 
