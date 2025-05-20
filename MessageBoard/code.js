@@ -44,7 +44,10 @@ alert("ugh")
 
 async function getSampleText() {
   const cool_thoing = ( (await fetch('sample.txt', {mode: "same-origin"})).text() );
-	console.log(cool_thoing)
+	cool_thoing.then(result => {
+    // Handle the successful result here
+    console.log("Promise fulfilled with:", result);
+  })
 }
 
 getSampleText()
