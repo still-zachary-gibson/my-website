@@ -49,6 +49,7 @@ async function getSampleText() {
     const messages = JSON.parse(result)
 	for(var i = 0; i < messages.length; i++)
 	{
+		alert(messages[i])
 		const test = document.createElement('div');
 		const time = (messages[i].date.getHours() >= 12) ? "PM" : "AM"
 		const hour = (messages[i].date.getHours() > 12) ? messages[i].date.getHours()-12 : messages[i].date.getHours()
