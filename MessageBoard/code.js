@@ -49,11 +49,11 @@ async function getSampleText() {
     const messages = JSON.parse(result)
 	for(var i = 0; i < messages.length; i++)
 	{
-		alert(messages[i])
+		messages[i].date = new Date(messages[i].date)
 		const test = document.createElement('div');
 		const time = (messages[i].date.getHours() >= 12) ? "PM" : "AM"
 		const hour = (messages[i].date.getHours() > 12) ? messages[i].date.getHours()-12 : messages[i].date.getHours()
-		const minutes = (messages[i].date.getMinutes() >= 10) ? messages[i].date.getMinutes : "0" + messages[i].date.getMinutes()
+		const minutes = (messages[i].date.getMinutes() >= 10) ? messages[i].date.getMinutes() : "0" + messages[i].date.getMinutes()
 		test.innerHTML = messages[i].sender + ": " + messages[i].message + " - " + hour + ":" + minutes + " " + time + " " + (messages[i].date.getMonth()+1) + "/" + messages[i].date.getDate() + " " + messages[i].date.getFullYear()
 		messa.appendChild(test)
 	}
