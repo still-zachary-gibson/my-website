@@ -60,7 +60,7 @@ function pause()
 
 	const thingToSave = JSON.stringify(messages)
 
-	await fetch('savedMessages.txt', {mode: "same-origin", method: "POST", body: thingToSave})
+	fetch('savedMessages.txt', {mode: "same-origin", method: "POST", body: thingToSave})
 }
 
 //tch('Message.html', {mode: "no-cors"}).then(x => alert(x.text()))
