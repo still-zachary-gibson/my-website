@@ -43,7 +43,7 @@ async function imageUrlToFile(imageUrl) {
 alert("ugh")
 
 async function getSampleText() {
-  const cool_thoing = ( (await fetch('sample.txt', {mode: "same-origin"})).json() );
+  const cool_thoing = ( (await fetch('sample.txt', {mode: "same-origin"})).text() );
 	alert(cool_thoing)
 }
 
