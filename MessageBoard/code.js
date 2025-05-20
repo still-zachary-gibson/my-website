@@ -43,10 +43,14 @@ async function imageUrlToFile(imageUrl) {
 alert("ugh")
 
 async function getSampleText() {
-  const cool_thoing = ( (await fetch('sample.txt', {mode: "same-origin"})).text() );
+  const cool_thoing = ( (await fetch('savedMessages.txt', {mode: "same-origin"})).text() );
 	cool_thoing.then(result => {
     // Handle the successful result here
-    console.log("Promise fulfilled with:", result);
+    const messages = JSON.parse(result)
+	for(var i = 0; i < messages.length; i++)
+	{
+		alert(i)
+	}
   })
 }
 
