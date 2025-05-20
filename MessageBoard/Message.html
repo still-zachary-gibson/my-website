@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>About Me</title>
+		<title>Message Board</title>
 		<link rel="stylesheet" href="../CSS/default.css">
 		<link rel="icon" type="image/x-icon" href="../Images/Icon.png">
 		<style>
@@ -18,9 +18,12 @@
 			<h1 id="funnyText">Awesome Website™</h1>
 		</div>
 		<div class="mainSite">
-			<a href="navi.html" id="back">Back</a>
+			<a href="Navi.html" id="back">Back</a>
 			<h1 style="text-align:center;">Message Board Thing</h1>
 			<p>Just send whatever, I guess?</p>
+			<input type="text" id="high_score_name" minlength="1" placeholder="Enter Name" style="margin: auto;display:block"></input>
+			<input type="text" id="high_score_input" minlength="1" placeholder="Enter Message" style="margin: auto;display:block"></input>
+			<button id="score_button_import" style="margin: auto;display:block" onclick="pause()">Send Message</button>
 			<p id="messa"></p>
 			<script src="code.js"></script>
 		</div>
