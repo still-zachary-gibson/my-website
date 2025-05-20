@@ -1,28 +1,3 @@
-function download(filename, text) {
-  var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-  element.setAttribute('download', filename);
-
-  element.style.display = 'none';
-  document.body.appendChild(element);
-
-  element.click();
-
-  document.body.removeChild(element);
-}
-
-function handleScore(file) {
-	const reader = new FileReader();
-    reader.onload = handleFileLoad;
-    reader.readAsText(file);
-}
-
-function handleFileLoad(event) {
-//download("test.txt", event.target.result)
-
-	alert(event.target.result)
-}
-
 async function getSampleText() {
   const cool_thoing = ( (await fetch('savedMessages.txt', {mode: "same-origin"})).text() );
 	cool_thoing.then(result => {
@@ -62,9 +37,7 @@ function pause()
 
 	fetch('savedMessages.txt', {mode: "same-origin", method: "POST", body: thingToSave})
 
-	getSampleText()
+	alert("It doesn't work, this was a waste of 3 hours. I don't like the taste of air anymore.")
+
+	//getSampleText()
 }
-
-//tch('Message.html', {mode: "no-cors"}).then(x => alert(x.text()))
-
-//imageUrlToFile('Message.html')
