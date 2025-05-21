@@ -25,6 +25,25 @@
 			<input type="text" id="high_score_input" minlength="1" placeholder="Enter Message" style="margin: auto;display:block"></input>
 			<button id="score_button_import" style="margin: auto;display:block" onclick="pause()">Send Message</button>
 			<p id="messa"></p>
+			<script type="module">
+			  // Import the functions you need from the SDKs you need
+			  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-app.js";
+			  // TODO: Add SDKs for Firebase products that you want to use
+			  // https://firebase.google.com/docs/web/setup#available-libraries
+			
+			  // Your web app's Firebase configuration
+			  const firebaseConfig = {
+			    apiKey: "AIzaSyDrSkAKO7JPAV91QM4LiBajB46jp1A6dy8",
+			    authDomain: "my-awesome-website-25b3a.firebaseapp.com",
+			    projectId: "my-awesome-website-25b3a",
+			    storageBucket: "my-awesome-website-25b3a.firebasestorage.app",
+			    messagingSenderId: "339474995951",
+			    appId: "1:339474995951:web:be46aa60e5ee06b595d91a"
+			  };
+			
+			  // Initialize Firebase
+			  const app = initializeApp(firebaseConfig);
+			</script>
 			<script src="code.js"></script>
 		</div>
 	</body>
